@@ -1,0 +1,11 @@
+[package]
+name = "pintrusive-derive"
+version = "0.1.0"
+authors = ["pythonesque"]
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "0.13.4"
+quote = "0.5.2"
