@@ -1,7 +1,8 @@
 #![feature(arbitrary_self_types, pin, optin_builtin_traits)]
 // NOTE: This is unsound in the presence of specialization.  It could be fixed by the constant
 // reflection trick, but unfortunately that breaks at the moment whenever there are trait bounds
-// floating around.
+// floating around.  However, I don't think this is a very fundamental issue: we really just need
+// Drop -> PinDrop on types deriving PinFields, which could be enforced pretty easily by the compiler if it came to that.
 // #![feature(specialization)]
 #[macro_use]
 pub extern crate pintrusive_derive;
